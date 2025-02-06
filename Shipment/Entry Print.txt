@@ -1,0 +1,249 @@
+     //if (userRole == "1")
+     //{
+
+//}
+//else
+//{
+
+//    if (Shipment_Type == "0" || Shipment_Type == "1")
+//    {
+//        if (Shipment_Type == "0")
+//        {
+//            contai = DBQ.getcontainerdata(Startdate, Enddate, Cargotype, "Performance_Dashboard.dbo.Sea_Export", userRole, Company_ID, Company_Name);
+//        }
+//        else if (Shipment_Type == "1")
+//        {
+//            contai = DBQ.getcontainerdata(Startdate, Enddate, Cargotype, "Performance_Dashboard.dbo.Sea_Import", userRole, Company_ID, Company_Name);
+//        }
+
+//        SqlCommand maplivecontai = new SqlCommand(contai);
+//        DataTable dt_contai = this.DA.GetDataTable(maplivecontai);
+//        int Count = dt_contai.Rows.Count;
+//        Count -= 1;
+//        if (dt_contai.Rows.Count > 0)
+//        {
+//            string monthlabledate = "";
+//            for (var c = 0; c < dt_contai.Rows.Count; c++)
+//            {
+//                string countainernumberdata = dt_contai.Rows[c]["containerNumber"].ToString();
+
+//                Incoterms = dt_contai.Rows[c]["Incoterms"].ToString();
+//                string query = DBQ.livemap(Startdate, Enddate, countainernumberdata, Shipment_Type, userRole, Company_ID);
+//                SqlCommand maplive = new SqlCommand(query);
+//                DataTable dt_month = this.DA.GetDataTable(maplive);
+//                int Counts = dt_month.Rows.Count;
+//                Counts -= 1;
+//                if (Counts >= 0)
+//                {
+//                    for (var i = 0; i < dt_month.Rows.Count; i++)
+//                    {
+//                        string toolconta = "";
+//                        string toolship = "";
+//                        string toolmbl = "";
+//                        string toolhbl = "";
+//                        string Shipperdata = "";
+//                        string Consigneedata = "";
+
+
+//                        toolconta = dt_month.Rows[i]["containerNumber"].ToString();
+//                        toolship = dt_month.Rows[i]["ShipmentNo"].ToString();
+//                        toolmbl = dt_month.Rows[i]["mblNumber"].ToString();
+//                        toolhbl = dt_month.Rows[i]["hblNumber"].ToString();
+//                        cleanedString = dt_month.Rows[i]["Shipper"].ToString();
+//                        Shipperdata = Regex.Replace(cleanedString, "'", "\"");
+//                        ConsigneeString = dt_month.Rows[i]["Consignee"].ToString();
+
+//                        Consigneedata = Regex.Replace(ConsigneeString, "'", "\"");
+
+//                        if (toolmbl == "")
+//                        {
+//                            toolmbl = "-";
+//                        }
+//                        if (toolhbl == "")
+//                        {
+//                            toolhbl = "-";
+//                        }
+
+//                        console1 = dt_month.Rows[i]["live_key"].ToString();
+//                        string tracid = dt_month.Rows[i]["live_Latitude"].ToString();
+//                        string Longitude = dt_month.Rows[i]["live_Longitude"].ToString();
+
+//                        if (Count == i)
+//                        {
+//                            string coordinate = "{ lat: " + tracid + ", lng: " + Longitude + ", userID: " + console1 + ", container: '" + toolconta + "', Shipper: '" + Shipperdata + "',Consignee: '" + Consigneedata + "', mbl: '" + toolmbl + "', hbl: '" + toolhbl + "',shipmentno:'" + toolship + "',Incoterms:'" + Incoterms + "' }";
+//                            coordinates += coordinate;
+//                        }
+//                        else
+//                        {
+//                            string coordinate = "{ lat: " + tracid + ", lng: " + Longitude + ", userID: " + console1 + ", container: '" + toolconta + "', Shipper: '" + Shipperdata + "',Consignee: '" + Consigneedata + "', mbl: '" + toolmbl + "', hbl: '" + toolhbl + "',shipmentno:'" + toolship + "',Incoterms:'" + Incoterms + "' }";
+//                            coordinates += coordinate + ",";
+//                        }
+
+//                    }
+//                }
+//                else
+//                {
+
+//                    string toolship = "";
+//                    string toolconta = "";
+//                    string toolmbl = "";
+//                    string toolhbl = "";
+//                    string Shipperdata = "";
+//                    string Consigneedata = "";
+//                    string countainerclient = "";
+
+//                    string querypd = DBQ.externalmap(countainernumberdata, Shipment_Type);
+//                    SqlCommand maplivepd = new SqlCommand(querypd);
+//                    DataTable dt_monthpd = this.DA.GetDataTable(maplivepd);
+//                    if (dt_monthpd.Rows.Count > 0)
+//                    {
+//                        string startLatlong = dt_monthpd.Rows[0]["loading"].ToString();
+
+
+//                        if (startLatlong != "")
+//                        {
+//                            startLatlong = dt_monthpd.Rows[0]["loading"].ToString();
+//                        }
+//                        else
+//                        {
+//                            startLatlong = dt_monthpd.Rows[0]["Discharge"].ToString();
+//                        }
+
+//                        toolconta = countainernumberdata;
+//                        toolship = dt_monthpd.Rows[0]["shipmentno"].ToString();
+//                        toolmbl = dt_monthpd.Rows[0]["mblNumber"].ToString();
+//                        toolhbl = dt_monthpd.Rows[0]["hblNumber"].ToString();
+//                        if (toolmbl == "")
+//                        {
+//                            toolmbl = "-";
+//                        }
+//                        if (toolhbl == "")
+//                        {
+//                            toolhbl = "-";
+//                        }
+
+//                        cleanedString = dt_monthpd.Rows[0]["Shipper"].ToString();
+//                        Shipperdata = Regex.Replace(cleanedString, "'", "\"");
+//                        ConsigneeString = dt_monthpd.Rows[0]["Consignee"].ToString();
+
+//                        Consigneedata = Regex.Replace(ConsigneeString, "'", "\"");
+//                        console1 = dt_monthpd.Rows[0]["port_key"].ToString();
+//                        if (console1 == "")
+//                        {
+//                            console1 = "''";
+
+//                        }
+
+//                        string[] data1 = startLatlong.Split(',');
+//                        string tracid = "";
+//                        string Longitude = "";
+//                        if (startLatlong != "")
+//                        {
+//                            tracid = data1[0].Trim();
+//                            Longitude = data1[1].Trim();
+//                        }
+
+
+//                        string coordinate = "{ lat: " + tracid + ",lng: " + Longitude + " ,userID:" + console1 + ",container:'" + toolconta + "',Shipper: '" + Shipperdata + "',Consignee: '" + Consigneedata + "',mbl:'" + toolmbl + "',hbl:'" + toolhbl + "',shipmentno:'" + toolship + "',Incoterms:'" + Incoterms + "'}";
+//                        coordinates += coordinate + ",";
+
+
+//                    }
+
+
+//                }
+//            }
+//            monthlabledate += "[" + coordinates + "]";
+//            monthlabledates.Text = monthlabledate;
+//        }
+//        else
+//        {
+//            string monthlabledate = "[]";
+//            monthlabledates.Text = monthlabledate;
+//        }
+
+
+//    }
+//    if (Shipment_Type == "2" || Shipment_Type == "3")
+//    {
+//        if (Shipment_Type == "2")
+//        {
+//            contai = DBQ.getAwbdata(Startdate, Enddate, "Performance_Dashboard.dbo.Air_Export", "0", "", "");
+//        }
+//        else if (Shipment_Type == "3")
+//        {
+//            contai = DBQ.getAwbdata(Startdate, Enddate, "Performance_Dashboard.dbo.Air_Import", "0", "", "");
+//        }
+
+//        SqlCommand maplivecontai = new SqlCommand(contai);
+//        DataTable dt_contai = this.DA.GetDataTable(maplivecontai);
+
+//        if (dt_contai.Rows.Count > 0)
+//        {
+//            string monthlabledate = "";
+           
+//            for (var c = 0; c < dt_contai.Rows.Count; c++)
+//            {
+//                string AWBNo = dt_contai.Rows[c]["AWBNO"].ToString();
+//                Incoterms = dt_contai.Rows[c]["Incoterms"].ToString();
+//                string awbNumber = AWBNo.Replace("-", "");
+//                string queryAir = DBQ.livemapAir(Startdate, Enddate, awbNumber, Shipment_Type, userRole, Company_ID);
+//                SqlCommand mapliveAir = new SqlCommand(queryAir);
+//                DataTable dt_Airlive = this.DA.GetDataTable(mapliveAir);
+//                int Count = dt_Airlive.Rows.Count;
+//                Count -= 1;
+//                if (Count >= 0)
+//                {
+//                    for (var i = 0; i < dt_Airlive.Rows.Count; i++)
+//                    {
+//                        string toolconta = "";
+//                        string toolship = "";
+//                        string Shipperdata = "";
+//                        string Consigneedata = "";
+//                        string ShipperRef = "";
+//                        for (var b = 0; b < dt_Airlive.Rows.Count; b++)
+//                        {
+//                            toolconta = dt_Airlive.Rows[b]["awbNumber"].ToString();
+//                            toolship = dt_Airlive.Rows[b]["ShipmentNo"].ToString();
+//                        }
+
+//                        cleanedString = dt_Airlive.Rows[i]["Shipper"].ToString();
+//                        Shipperdata = Regex.Replace(cleanedString, "'", "\"");
+//                        ConsigneeString = dt_Airlive.Rows[i]["Consignee"].ToString();
+
+//                        Consigneedata = Regex.Replace(ConsigneeString, "'", "\"");
+
+//                        ShipperRef = dt_Airlive.Rows[i]["ShipperRefNo"].ToString();
+//                        ShipperRef = ReplaceWhitespace(ShipperRef, "");
+
+//                        console1 = dt_Airlive.Rows[i]["LL_PK"].ToString();
+//                        string tracid = dt_Airlive.Rows[i]["live_Latitude"].ToString();
+//                        string Longitude = dt_Airlive.Rows[i]["live_Longitude"].ToString();
+//                        if (Count == i)
+//                        {
+//                            string coordinate = "{ lat: " + tracid + ",lng: " + Longitude + " ,userID:" + console1 + ",container:'" + toolconta + "',Shipper: '" + Shipperdata + "',Consignee: '" + Consigneedata + "',ShipperRefNo: '" + ShipperRef + "',shipmentno:'" + toolship + "',Incoterms:'" + Incoterms + "' }";
+//                            coordinates += coordinate + ",";
+//                        }
+//                        else
+//                        {
+//                            string coordinate = "{ lat: " + tracid + ",lng: " + Longitude + " ,userID:" + console1 + ",container:'" + toolconta + "',Shipper: '" + Shipperdata + "',Consignee: '" + Consigneedata + "',ShipperRefNo: '" + ShipperRef + "',shipmentno:'" + toolship + "',Incoterms:'" + Incoterms + "' }";
+//                            coordinates += coordinate + ",";
+//                        }
+//                    }
+//                }
+
+
+
+//            }
+//            monthlabledate += "[" + coordinates + "]";
+//            monthlabledates.Text = monthlabledate;
+//        }
+//        else
+//        {
+//            string monthlabledate = "[]";
+//            monthlabledates.Text = monthlabledate;
+//        }
+
+//    }
+  
+//}

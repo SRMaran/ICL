@@ -1,0 +1,20 @@
+﻿ <div class="row">
+                       
+                        <div class="col-sm-4">
+                            <label class="card-title">Consignor Name</label>
+                            <p>%%eb_consignorname%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Consignee Name</label>
+                            <p>%%eb_consigneename%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title"> Booking Number</label>
+                            <p>%%eb_bookingid%%</p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label class="card-title">Order Ref</label>
+                            <p>%%eb_shippersref%%</p>
+                        </div>
+                    </div>

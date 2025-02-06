@@ -1,0 +1,49 @@
+﻿           <div class="row">
+                        
+                        <div class="col-sm-4">
+                            <label class="card-title">
+                                Last Milestone Desc
+                            </label>
+                            <p>Departure from First Load Port</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Goods Description</label>
+                            <p>%%spr_goodsdescription%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">TEU</label>
+                            <p>%%spr_teu%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Incoterm</label>
+                            <p>%%spr_incoterm%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Container Mode</label>
+                            <p>%%spr_mode%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Container Number</label>
+                            <p>
+                                %%icfd_container%%
+                            </p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label class="card-title">Weight</label>
+                            <p>
+                                %%spr_weight%%
+                            </p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label class="card-title">Volume</label>
+                            <p>
+                             %%spr_volume%%
+                            </p>
+                        </div>
+                       
+
+
+
+                    </div>

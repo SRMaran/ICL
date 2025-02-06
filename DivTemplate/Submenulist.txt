@@ -1,0 +1,8 @@
+﻿ <tr>          
+<td>%%Menuname%%</th>
+<td>%%pagename%%</th>
+<td>%%Menulist%%</th>
+<td>%%Date%%</th>
+ <td><a class='btn btn-primary btn-sm' type="Button" href="submenuUpdate.aspx?id=%%Menukey%%">Update</a></th>
+ <td><a  class='btn btn-danger btn-sm' type="Button" onclick="Submenudelete(this,'%%Menukey%%');event.preventDefault();">Delete</a></th>
+  </tr>

@@ -1,0 +1,10 @@
+﻿ <tr>
+                    <td>%%ICL_username%%</td>
+                    <td>%%org_name%%</td>
+                    <td>%%ICL_Email%%</td>
+                    <td>%%ICL_MobileNo%%</td>
+                    <td>%%ICL_Address%%</td>
+                    <td>%%ActiveText%%</td>
+                     <td>%%ICL_CreatedOn%%</td>
+                     <td><a href="UserCreation.aspx?id=%%ICL_UserId%%" class="btn btn-primary btn-sm waves-effect waves-light">Update</a></td>
+                </tr>

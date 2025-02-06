@@ -1,0 +1,16 @@
+﻿ <div class="row">
+                       
+                        <div class="col-sm-4">
+                            <label class="card-title">Job Number</label>
+                            <p>%%gbi_job%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Client</label>
+                            <p>%%gbi_importer%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title"> Order Ref</label>
+                            <p>%%spr_shippersreference%%</p>
+                        </div>
+                        
+                    </div>

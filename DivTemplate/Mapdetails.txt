@@ -1,0 +1,18 @@
+﻿
+
+                                <tr class="unread clickable-row" data-href="#">
+								<td><div class="email-img">
+														<i class="feather-check-circle" style="color: forestgreen"></i>
+													</div></td>
+										<td class="name">
+												<div class="email-img-blk">
+													
+													<div class="send-user">
+														<h5 style="color: blue">%%description%%</h5>
+														<p>%%name%%</p>
+													</div>
+												</div>
+											</td>
+											<td></td>
+											<td class="mail-date">%%date%%</td>
+										</tr>

@@ -1,0 +1,8 @@
+﻿ <tr>
+                    <td>%%ICl_UserName%%</td>
+                    <td>%%ICL_email%%</td>
+                    <td>%%ICL_createdon%%</td>
+                    <td>%%ActiveText%%</td>
+                    <td><a href="AdminCreation.aspx?id=%%ICL_UserId%%"class="btn btn-primary btn-sm waves-effect waves-light">Update</a></td>
+                    <td> <a><span class="btn btn-danger btn-sm" onclick="fn_DeleteProject('%%ICL_UserId%%')">Delete</span></a></td>
+                </tr>

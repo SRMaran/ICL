@@ -1,0 +1,19 @@
+﻿          <div class="row">
+                       
+                        <div class="col-sm-4">
+                            <label class="card-title">Shipment ID</label>
+                            <p>%%spr_shipmentid%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Suplier name</label>
+                            <p>%%spr_consignorname%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Buyer name</label>
+                            <p>%%spr_consigneename%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Order ref</label>
+                            <p>%%spr_shippersreference%%</p>
+                        </div>
+                    </div>

@@ -1,0 +1,249 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Masterpage_MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <title><asp:Literal ID="li_title" runat="server"></asp:Literal></title>
+    <link href="../Template/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="../Template/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../Template/assets/plugins/fontawesome/css/all.min.css">
+  
+    <%--    Drop down--%>
+    <link rel="stylesheet" href="../Template/assets/plugins/c3-chart/c3.min.css">
+    <link rel="stylesheet" type="text/css" href="../Template/assets/css/select2.min.css">
+    <%--    Datatable  --%>
+    <link href="../Template/assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+   <%-- <link href="../Template/assets/plugins/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />--%>
+    <!-- Responsive datatable examples -->
+    <link href="../Template/assets/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <%--    alertify design --%>
+    <link href="../Template/assets/alertifyjs/css/alertify.min.css" rel="stylesheet" />
+    <link href="../Template/assets/alertifyjs/css/themes/default.min.css" rel="stylesheet" />
+    <script src="../Template/assets/alertifyjs/alertify.min.js"></script>
+    <script src="../Template/assets/js/jquery-3.7.1.min.js"></script>
+   
+        <style>
+            .ds-none {
+    display: block !important
+}
+           @media (max-width: 992px) {
+    .ds-sm-block {
+        display: none !important
+    }
+}
+        </style>
+        <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: transparent;
+            color: black;
+            text-align: center;
+        }
+
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8) url('../images/fav.png') no-repeat center;
+            z-index: 9999;
+        }
+
+        body.loaded #loader {
+            display: none;
+        }
+        #img {
+    display: block; /* Large logo visible initially */
+}
+
+#img2 {
+    display: none; /* Small logo hidden initially */
+}
+
+    </style>
+
+ <script>
+     document.addEventListener("DOMContentLoaded", function () {
+         const toggleBtn = document.getElementById("toggle_btn");
+         const img1 = document.getElementById("img");
+         const img2 = document.getElementById("img2");
+
+         // Toggle function
+         function myFunction() {
+             if (img1.style.display === "none") {
+                 img1.style.display = "block"; // Show large logo
+                 img2.style.display = "none";  // Hide small logo
+             } else {
+                 img1.style.display = "none";  // Hide large logo
+                 img2.style.display = "block"; // Show small logo
+             }
+         }
+
+         // Attach event listener to the toggle button
+         toggleBtn.addEventListener("click", myFunction);
+     });
+    </script>    
+    <link href="../Template/assets/plugins/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<link href="../Template/assets/plugins/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" />
+    
+    <%--    drag-drop  --%>
+    <link rel="stylesheet" href="../Template/assets/plugins/dragula/css/dragula.min.css">
+
+    <%--    Icon  --%>
+    <link rel="stylesheet" href="../Template/assets/plugins/feather/feather.css">
+    <%--    Date  --%>
+    <link rel="stylesheet" href="../Template/assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../Template/assets/plugins/daterangepicker/daterangepicker.css">
+    <%--    font style  --%>
+    <link href="../Template/assets/css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-signin">
+        <div class="main-wrapper">
+            <div class="header">
+                <div class="header-left">
+                    <a href="~/Web/Dashboard.aspx" class="logo" runat="server">
+                   
+                        <img id="img"  src="../images/icllogo3.jpg" style="margin-top: 10px;width: 200px;">
+                          <img id="img2" src="../images/logo/favicon.jpg"  style="margin-top: 10px;height: 45px;"/>
+                    
+                    </a>
+                </div>
+                <div id="loader"></div>
+                <div class="left-right-menu">
+                  
+                    <a id="toggle_btn" class="left-chev" href="javascript:void(0);">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+                </div>
+                <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fas fa-bars"></i></a>
+                <div class="header-nav-blk">
+                    <h2 id="hd_title" runat="server" class="title"></h2><h2 id="hd_secondtitle" runat="server"></h2>
+                </div>
+                <ul class="nav user-menu user-menu-group float-end">
+                    <li class="nav-item dropdown  user-profile-list ds-none ds-sm-block">
+                        <a href="#" class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+                            <span class="user-img">
+                                <asp:Image ID="img_profile" runat="server" CssClass="rounded-circle" Width="40" alt="Admin" />
+                                <span class="status online"></span>
+                            </span>
+                            <div class="user-names">
+                                <h6 id="lb_Username" runat="server"></h6>
+                                <span id="sp_role" runat="server"></span>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../Web/ProfilePage.aspx"><i style="color: blue" class="fas fa-address-card"></i>&nbsp&nbsp My Profile</a>
+                            <a class="dropdown-item" href="../Web/Changepassword.aspx"><i style="color: blue" class="fas fa-user-lock"></i>&nbsp Change Password</a>
+                            <a class="dropdown-item" href="../LogOut.aspx">
+                                <i style="color: blue" class="fas fa-lock"></i>&nbsp&nbsp Logout</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-none d-sm-block">
+                        <a href="../Web/Notification.aspx" class="hasnotifications nav-link bg-box">
+                            <img src="../Template/assets/img/icon/note-icon.svg" style="height: 30px;"></a>
+                        
+                    </li>
+                     <li class="nav-item dropdown user-profile-list" id="OrgID" runat="server">
+     <a class="dropdown-toggle nav-link user-link" data-bs-toggle="dropdown">
+
+         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" color="#112560" height="27" width="27" xmlns="http://www.w3.org/2000/svg" style="color: rgb(17, 37, 96);"><path d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"></path></svg>
+         </a>
+                          <div class="dropdown-menu">
+                              <asp:DropDownList CssClass="dropdown-item" ID="Orgname" runat="server" AutoPostBack="true" OnSelectedIndexChanged="Orgname_SelectedIndexChanged"></asp:DropDownList>
+    
+ </div>
+
+                         </li>
+                </ul>
+                <div class="dropdown mobile-user-menu float-end">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </div>
+
+             
+            </div>
+
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-inner slimscroll">
+                    <div id="sidebar-menu" class="sidebar-menu">
+                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <%--<li class="active">
+<a class="active" href="index.html"><img src="assets/img/icon/menu-icon-01.svg" alt="img"> <span>Dashboard</span></a>
+</li>--%>
+            <div class="page-wrapper bg-wrapper">
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.body.classList.add("loaded");
+            }, 1000); // Simulate 2 seconds loading time
+        });
+    </script>
+    
+    <%--<script src="../Template/assets/js/jquery-3.6.0.min.js" type="text/javascript"></script>--%>
+    <script src="../Template/assets/js/popper.min.js" type="text/javascript"></script>
+    <script src="../Template/assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+
+    <script src="../Template/assets/js/feather.min.js" type="text/javascript"></script>
+
+    <script src="../Template/assets/plugins/apexchart/apexcharts.min.js" type="text/javascript"></script>
+    <script src="../Template/assets/plugins/apexchart/chart-data.js" type="text/javascript"></script>
+
+
+    <script src="../Template/assets/plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../Template/assets/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="../Template/assets/plugins/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../Template/assets/plugins/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="../Template/assets/plugins/jszip/jszip.min.js"></script>
+    <script src="../Template/assets/plugins/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../Template/assets/plugins/pdfmake/build/vfs_fonts.js"></script>
+    <script src="../Template/assets/plugins/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../Template/assets/plugins/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../Template/assets/plugins/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <!-- Responsive examples -->
+    <script src="../Template/assets/plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../Template/assets/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+    <script src="../Template/assets/js/datatables.init.js"></script>
+
+    <script src="../Template/assets/js/select2.min.js" type="text/javascript"></script>
+
+    <script src="../Template/assets/plugins/moment/moment.min.js" type="text/javascript"></script>
+    <script src="../Template/assets/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="../Template/assets/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+    <!-- Drag-drop  -->
+    <script src="../Template/assets/plugins/dragula/js/dragula.min.js" type="text/javascript"></script>
+<script src="../Template/assets/plugins/dragula/js/drag-drop.min.js" type="text/javascript"></script>
+
+    <script src="../Template/assets/js/jquery.slimscroll.js" type="text/javascript"></script>
+    <script src="../Template/assets/js/app.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV_g8YeyMwbaf-ytC6oRmogpx9DSH1Cqg&callback=initMap" async defer></script>
+
+    <%--    altertify design --%>
+</body>
+</html>

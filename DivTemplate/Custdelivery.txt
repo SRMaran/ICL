@@ -1,0 +1,19 @@
+﻿<div class="row">
+                        <div class="col-sm-4">
+                            <label class="card-title">Origin</label>
+                            <p>originname (%%gbi_origin15%%)</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Destination</label>
+                            <p>destname (%%gbi_destination17%%)</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Departure</label>
+                            <p>%%gbi_clearancedate%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Arrival</label>
+                            <p>%%gbi_arrivaldate%%</p>
+                        </div>
+                        
+                    </div>

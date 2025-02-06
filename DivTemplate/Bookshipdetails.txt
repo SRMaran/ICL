@@ -1,0 +1,27 @@
+﻿              <div class="row">
+                        <div class="col-sm-4">
+                            <label class="card-title">Container Mode </label>
+                            <p>%%eb_mode%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Type</label>
+                            <p>NA</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Incoterm</label>
+                            <p>%%spr_incoterm%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Booking Date</label>
+                            <p>%%eb_booked%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Add. Terms</label>
+                            <p>NA</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Carrier</label>
+                            <p>%%eb_carriername%%</p>
+                        </div>
+                       
+                    </div>

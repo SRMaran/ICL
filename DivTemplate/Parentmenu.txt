@@ -1,0 +1,7 @@
+﻿ <tr>
+                    <td>%%Menuname%%</td>
+                    <td>%%Menudescription%%</td>
+                    <td>%%createdon%%</td>
+                     <td><a href="Addparentmenu.aspx?id=%%Menukey%%"class="btn btn-primary btn-sm waves-effect waves-light">Update</a></td>
+                  <td><a  class='btn btn-danger btn-sm' type="Button" onclick="gridtabledelete(this,'%%Menukey%%');event.preventDefault();">Delete</a></td>
+                </tr>

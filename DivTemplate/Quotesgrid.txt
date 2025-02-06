@@ -1,0 +1,11 @@
+﻿ <tr>
+                   <td>%%Id%%</td>
+                    <td>%%transportmode%%</td>
+                    <td>%%type%%</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>%%issuedate%%</td>
+                       <td>%%companyname%%</td>
+                    <td>%%validfrom%%</td>
+                    <td>%%validto%%</td>
+                </tr>

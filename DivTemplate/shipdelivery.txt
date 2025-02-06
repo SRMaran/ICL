@@ -1,0 +1,29 @@
+﻿       <div class="row">
+                        <div class="col-sm-4">
+                            <label class="card-title">Pickup From </label>
+                            <p>%%spr_origin%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Delivery Destination</label>
+                            <p>%%spr_destination%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Actual Pickup</label>
+                            <p>%%spr_actualpickup%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Estimated Pickup</label>
+                            <p> %%spr_estcartagedelivery%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Estimated Delivery Date</label>
+                            <p>%%spr_actualcartagedelivery%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Actual Delivery</label>
+                            <p>
+                               %%spr_actualcartagedelivery%%
+                            </p>
+                        </div>
+
+                    </div>

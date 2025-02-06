@@ -1,0 +1,58 @@
+﻿              <div class="row">
+                        <div class="col-sm-4">
+                            <label class="card-title">Mode </label>
+                            <p>(%%spr_trans%% Freight)</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Origin</label>
+                            <p> %%originname%% (%%spr_origin%%)</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">desitination</label>
+                            <p> %%destname%% (%%spr_destination%%) </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Container</label>
+                            <p>STD (Standard House )</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">ETD (est depart)</label>
+                            <p>%%spr_originetd%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">ETA (est arrival)</label>
+                            <p>%%spr_destinationeta%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Vessel</label>
+                            <p>%%spr_vessel%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Carrier</label>
+                            <p>%%spr_carriername%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Incoterm</label>
+                            <p>%%spr_incoterm%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">BOL</label>
+                            <p>%%spr_houseref%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Container Count</label>
+                            <p>%%spr_containercount%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Voy./Flight</label>
+                            <p>%%spr_flightvoyage%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">ATD (actual departure)</label>
+                            <p>%%spr_actualcartagedelivery%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">ATA (actual arrival)</label>
+                            <p>%%spr_actualpickup%%</p>
+                        </div>
+                    </div>

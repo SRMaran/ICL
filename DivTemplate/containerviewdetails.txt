@@ -1,0 +1,40 @@
+﻿          <div class="row">
+                       
+                        <div class="col-sm-4">
+                            <label class="card-title">Container Number</label>
+                            <p>%%icfd_container%%</p>
+                       </div>
+                        <div class="col-sm-4">
+                            <label class="card-title"> Shipment Number</label>
+                            <p>%%icfd_jobref%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Console Number</label>
+                            <p>NA</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">BOL</label>
+                            <p>%%icfd_houseref%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Carrier</label>
+                            <p>%%spr_carriername%%</p>
+                        </div>
+                          <div class="col-sm-4">
+                            <label class="card-title">Vessel</label>
+                            <p>%%icfd_vessel%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Voyage</label>
+                            <p>%%icfd_voyage%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Mode</label>
+                            <p>%%icfd_contmode%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">CRT</label>
+                            <p>%%icfd_conttype%%</p>
+                        </div>
+                       
+                    </div>

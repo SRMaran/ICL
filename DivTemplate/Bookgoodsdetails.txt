@@ -1,0 +1,39 @@
+﻿           <div class="row">
+                        
+                        <div class="col-sm-4">
+                            <label class="card-title">
+                                Container Number
+                            </label>
+                            <p>%%icfd_container%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Type</label>
+                            <p>%%icfd_conttype%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Count</label>
+                            <p>%%eb_concount%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Description</label>
+                            <p>%%eb_cargodescription%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Pieces</label>
+                            <p>%%eb_packs%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Pack Type</label>
+                            <p>
+                              %%eb_type%%
+                            </p>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <label class="card-title">Weight</label>
+                            <p>
+                               %%eb_weight%% KG
+                            </p>
+                        </div>
+
+                    </div>

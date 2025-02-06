@@ -1,0 +1,18 @@
+﻿     
+     <div id="shipments">
+     <a onclick="navigateToShimentDetails('%%shipmentencrypt%%')" style="cursor: pointer;">
+                        <div class="alert alert-info alert-dismissible fade show  waves-effect waves-light" role="alert"  style="width: 440px">
+                            <div class="row">
+                                <div class="col-md-5"><b>%%icfd_jobref%%</b> </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                    <b>%%spr_originetd%% </b>
+                                </div>
+                                <div class="col-md-5">%%spr_origin%%</div>
+                                <div class="col-md-2"><i class="feather-arrow-right"></i></div>
+                                <div class="col-md-5">
+                                    %%spr_destination%%
+                                </div>
+                            </div>
+                        </div>
+                    </a></div>

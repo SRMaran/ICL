@@ -1,0 +1,8 @@
+﻿ <tr>
+                    <td>%%org_name%%</td>
+                    <td>%%org_ccode%%</td>
+                    <td>%%icl_username%%</td>
+                    <td>%%org_address%%</td>
+                    <td>%%org_billingname%%</td>
+                     <td><a href="Createclient.aspx?id=%%org_id%%"class="btn btn-primary btn-sm waves-effect waves-light">Update</a></td>
+                       </tr>

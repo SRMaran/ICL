@@ -1,0 +1,25 @@
+﻿ <div class="row">
+                        
+                        <div class="col-sm-4">
+                            <label class="card-title">
+                              Containers
+                            </label>
+                            <p>%%icfd_container%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Container Number</label>
+                            <p>%%spr_containercount%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Description</label>
+                            <p>%%gbi_dectypedescription%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Weight</label>
+                            <p>%%gbi_weight%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Volume</label>
+                            <p>%%gbi_vol%%</p>
+                        </div>
+                    </div>

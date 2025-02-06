@@ -1,0 +1,37 @@
+﻿
+            	 <tr onclick="navigateToShimentDetails('%%shipencryptid%%');" style="cursor: pointer;">
+            <td  onclick="event.stopPropagation(); handleShipmentAction(this, this.getAttribute('data-action'));"  
+           data-action="insert"
+           data-shiptransmode="%%spr_trans%%"
+           data-shipmode="%%spr_mode%%" 
+           data-shipmentid="%%spr_shipmentid%%" 
+           data-shipreference="%%spr_shippersreference%%"
+           data-shiporign="%%spr_origin%%"
+           data-shiporiginetd="%%spr_originetd%%"
+           data-shipconsignorname="%%spr_consignorname%%"
+           data-shipconsigneename="%%spr_consigneename%%"
+           data-shipdestination="%%spr_destination%%"
+           data-shipdestinationeta="%%spr_destinationeta%%"
+           data-shipvessel="%%spr_vessel%%"
+           data-shipgoodsdescription="%%spr_goodsdescription%%"
+           data-shipestcartagedelivery="%%spr_estcartagedelivery%%"
+           data-shipactualcartagedelivery="%%spr_actualcartagedelivery%%">
+            <i class="%%icon%%" style="color:orange; cursor:pointer;">
+           </i></td>
+                                    <td><i class="fa fa-%%spr_tran%%"></i></td>
+                                    <td>%%spr_mode%%</td>
+                                    <td>%%spr_shipmentid%%</td>
+                                    <td>%%spr_shippersreference%%</td>
+                                     <td>%%spr_consignorname%%</td>
+                                    <td>%%spr_origin%%</td>
+                                    <td>%%spr_originetd%%</td>
+                                    <td>%%spr_consignorname%%</td>
+                                    <td>%%spr_consigneename%%</td>
+                                    <td>%%spr_destination%%</td>
+                                    <td>%%spr_destinationeta%%</td>
+                                    <td>%%spr_vessel%% </td>
+                                    <td>%%spr_houseref%% </td>
+                                    <td>%%spr_goodsdescription%%</td>
+                                    <td>%%spr_estcartagedelivery%%</td>
+                                    <td>%%spr_actualcartagedelivery%%</td>
+                                </tr>

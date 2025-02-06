@@ -1,0 +1,36 @@
+﻿<tr onclick="navigateToBookingDetails('%%Bookencrptid%%');" style="cursor: pointer;">
+   <td  onclick="event.stopPropagation(); handleBookingAction(this, this.getAttribute('data-action'));"  
+           data-action="insert"
+           data-bookid="%%eb_bookingid%%" 
+           data-bookshipref="%%eb_shippersref%%"
+           data-booktrans="%%eb_trans%%"
+           data-bookmode="%%eb_mode%%" 
+           data-bookorigin="%%eb_origin%%"
+           data-booketd="%%eb_bookingetd%%"
+           data-bookconsignorname="%%eb_consignorname%%"
+           data-bookconsigneename="%%eb_consigneename%%"
+           data-bookdest="%%eb_dest%%"
+           data-booketa="%%eb_bookingeta%%"
+           data-bookcarriername="%%eb_carriername%%"
+           data-bookvessel="%%eb_vessel%%"
+           data-bookvoyageflight="%%eb_voyageflight%%"> 
+           <i class="%%icon%%" style="cursor: pointer;color:orange" 
+         onmouseover="handleStarHover(this)" 
+         onmouseout="handleStarOut(this);"></i></td>
+                     <td> %%eb_bookingid%%</td>
+                                    <td>%%eb_shippersref%%</td>
+                                    <td><i class="fa fa-%%eb_tran%%"></i></td>
+                                    <td>%%eb_mode%%</td>
+                                    <td>%%eb_origin%%</td>
+                                    <td>%%eb_bookingetd%%</td>
+                                    <td>%%eb_consignorname%%</td>
+                                    <td>%%eb_consigneename%%</td>
+                                    <td>%%eb_dest%%</td>
+                                    <td>%%eb_bookingeta%%</td>
+                                    <td>%%eb_carriername%% </td>
+                                    <td>%%eb_vessel%%</td>
+                                    <td>%%eb_voyageflight%%</td>
+                              </tr> 
+
+
+          

@@ -1,0 +1,53 @@
+﻿          
+          <div class="row">
+                         
+                        <div class="col-sm-4">
+                            <label class="card-title">Transport Mode </label>
+                            <p>%%gbi_transmode25%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Declarants Ref</label>
+                            <p>%%spr_shippersreference%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Supplier</label>
+                            <p>%%gbi_supplier%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Vessel</label>
+                            <p>%%spr_vessel%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Voyage/Flight</label>
+                            <p>%%spr_flightvoyage%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Entry Number</label>
+                          <p style="word-wrap: break-word; overflow-wrap: break-word;">%%gbi_entrynumbers%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Entry Status</label>
+                            <p>%%gbi_status%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Desc.Container Mode</label>
+                            <p>%%gbi_statusdescription%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Master Bill</label>
+                            <p>%%gbi_masterbill%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">House Bill</label>
+                            <p>%%gbi_housebill%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Date Created</label>
+                            <p>%%gbi_createdon%%</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <label class="card-title">Importer</label>
+                            <p>%%gbi_importer%%</p>
+                        </div>
+                    </div>
+                   

@@ -1,0 +1,6 @@
+﻿ <tr> <td>%%Role%%</td>
+                    <td>%%GM_GroupName%%</td>
+                    <td>%%GM_Description%%</td>
+                    <td><a href="CreateGroup.aspx?id=%%GM_PK%%"class="btn btn-primary btn-sm waves-effect waves-light">Update</a></td>
+                    <td> <a><span class="btn btn-danger btn-sm" onclick="fn_DeleteProject('%%GM_PK%%')">Delete</span></a></td>
+                </tr>

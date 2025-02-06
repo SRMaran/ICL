@@ -1,0 +1,459 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ICL HUB</title>
+
+    <style type="text/css" rel="stylesheet" media="all">
+        /* Base ------------------------------ */
+
+        *:not(br):not(tr):not(html) {
+            font-family: PROXIMA NOVA MEDIUM;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: proxima-nova, sans-serif;
+            width: 100% !important;
+            height: 100%;
+            margin: 0;
+            line-height: 1.4;
+            background-color: #F2F4F6;
+            color: #74787E;
+            -webkit-text-size-adjust: none;
+        }
+
+        p,
+        ul,
+        ol,
+        blockquote {
+            line-height: 1.4;
+            text-align: left;
+        }
+
+        a {
+            color: #3869D4;
+        }
+
+            a img {
+                border: none;
+            }
+        /* Layout ------------------------------ */
+
+        .email-wrapper {
+            font-family: proxima-nova, sans-serif;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #F2F4F6;
+        }
+
+        .email-content {
+            font-family: proxima-nova, sans-serif;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+        /* Masthead ----------------------- */
+
+        .email-masthead {
+            font-family: proxima-nova, sans-serif;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .email-masthead_logo {
+            width: 94px;
+        }
+
+        .email-masthead_name {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffff;
+            text-decoration: none;
+            text-shadow: 0 1px 0 white;
+        }
+        /* Body ------------------------------ */
+
+        .email-body {
+            font-family: proxima-nova, sans-serif;
+            width: 80%;
+            margin: 0;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .email-body_inner {
+            width: 80%;
+            margin: 0 auto;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #FFFF;
+        }
+
+        .email-footer {
+            font-family: proxima-nova, sans-serif;
+            width: 80%;
+            background-color: darkblue;
+            margin: 0 auto;
+            padding: 0;
+            -premailer-width: 570px;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            text-align: center;
+        }
+
+            .email-footer p {
+                font-family: proxima-nova, sans-serif;
+                color: #ffff;
+            }
+
+        .body-action {
+            width: 80%;
+            margin: 30px auto;
+            padding: 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            text-align: center;
+        }
+
+        .body-sub {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #EDEFF2;
+        }
+
+        .content-cell {
+            padding: 35px;
+        }
+
+        .preheader {
+            display: none !important;
+        }
+        /* Attribute list ------------------------------ */
+
+        .attributes {
+            margin: 0 0 21px;
+        }
+
+        .attributes_content {
+            background-color: #EDEFF2;
+            padding: 16px;
+        }
+
+        .attributes_item {
+            padding: 0;
+        }
+        /* Related Items ------------------------------ */
+
+        .related {
+            width: 100%;
+            margin: 0;
+            padding: 25px 0 0 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .related_item {
+            padding: 10px 0;
+            color: #74787E;
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        .related_item-title {
+            display: block;
+            margin: .5em 0 0;
+        }
+
+        .related_item-thumb {
+            display: block;
+            padding-bottom: 10px;
+        }
+
+        .related_heading {
+            border-top: 1px solid #EDEFF2;
+            text-align: center;
+            padding: 25px 0 10px;
+        }
+        /* Discount Code ------------------------------ */
+
+        .discount {
+            width: 100%;
+            margin: 0;
+            padding: 24px;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+            background-color: #EDEFF2;
+            border: 2px dashed #9BA2AB;
+        }
+
+        .discount_heading {
+            text-align: center;
+        }
+
+        .discount_body {
+            text-align: center;
+            font-size: 15px;
+        }
+        /* Social Icons ------------------------------ */
+
+        .social {
+            width: auto;
+        }
+
+            .social td {
+                padding: 0;
+                width: auto;
+            }
+
+        .social_icon {
+            height: 20px;
+            margin: 0 8px 10px 8px;
+            padding: 0;
+        }
+        /* Data table ------------------------------ */
+
+        .purchase {
+            width: 100%;
+            margin: 0;
+            padding: 35px 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .purchase_content {
+            width: 100%;
+            margin: 0;
+            padding: 25px 0 0 0;
+            -premailer-width: 100%;
+            -premailer-cellpadding: 0;
+            -premailer-cellspacing: 0;
+        }
+
+        .purchase_item {
+            padding: 10px 0;
+            color: #74787E;
+            font-size: 15px;
+            line-height: 18px;
+        }
+
+        .purchase_heading {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #EDEFF2;
+        }
+
+            .purchase_heading p {
+                margin: 0;
+                color: #9BA2AB;
+                font-size: 12px;
+            }
+
+        .purchase_footer {
+            padding-top: 15px;
+            border-top: 1px solid #EDEFF2;
+        }
+
+        .purchase_total {
+            margin: 0;
+            text-align: right;
+            font-weight: bold;
+            color: #2F3133;
+        }
+
+        .purchase_total--label {
+            padding: 0 15px 0 0;
+        }
+        /* Utilities ------------------------------ */
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+        /*Media Queries ------------------------------ */
+
+        @media only screen and (max-width: 600px) {
+            .email-body_inner,
+            .email-footer {
+                width: 100% !important;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .button {
+                width: 100% !important;
+            }
+        }
+        /* Buttons ------------------------------ */
+
+        .button {
+            background-color: #3869D4;
+            border-top: 10px solid #3869D4;
+            border-right: 18px solid #3869D4;
+            border-bottom: 10px solid #3869D4;
+            border-left: 18px solid #3869D4;
+            display: inline-block;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 3px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
+            -webkit-text-size-adjust: none;
+        }
+
+        .button--green {
+            background-color: #22BC66;
+            border-top: 10px solid #22BC66;
+            border-right: 18px solid #22BC66;
+            border-bottom: 10px solid #22BC66;
+            border-left: 18px solid #22BC66;
+        }
+
+        .button--red {
+            background-color: #FF6136;
+            border-top: 10px solid #FF6136;
+            border-right: 18px solid #FF6136;
+            border-bottom: 10px solid #FF6136;
+            border-left: 18px solid #FF6136;
+        }
+        /* Type ------------------------------ */
+
+        h1 {
+            font-family: proxima-nova, sans-serif;
+            margin-top: 0;
+            color: #2F3133;
+            font-size: 19px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        h2 {
+            font-family: proxima-nova, sans-serif;
+            margin-top: 0;
+            color: #2F3133;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        h3 {
+            font-family: proxima-nova, sans-serif;
+            margin-top: 0;
+            color: #2F3133;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        p {
+            font-family: proxima-nova, sans-serif;
+            margin-top: 0;
+            color: #74787E;
+            font-size: 16px;
+            line-height: 1.5em;
+            text-align: left;
+        }
+
+            p.sub {
+                font-family: proxima-nova, sans-serif;
+                font-size: 12px;
+            }
+
+            p.center {
+                text-align: center;
+            }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+    <span class="preheader">Welcome to  Our ICL HUB </span>
+    <table class="email-wrapper" width="200%" cellpadding="0" cellspacing="0">
+   
+        <tr>
+            <td class="email-body" width="80%" cellpadding="0" cellspacing="0">
+                <table class="email-body_inner" align="center" width:"80%" cellpadding="0" cellspacing="0">
+                        <tr>
+          <td class="email-masthead">
+              <a class="email-masthead_name">
+                  <img src="https://i.ibb.co/VHCK42N/logo1.png" style="width: 15%;" />
+              </a>
+          </td>
+      </tr>
+                    <tr>
+      <td class="email-masthead">
+          <a class="email-masthead_name text-center'" style="color:#02028f;    font-family: sans-serif;">
+              Message from ICL HUB
+          </a>
+      </td>
+  </tr>               
+                    <tr>
+    <td class="email-masthead">
+        <p style="font-family: sans-serif;text-align:center">
+           You are receving this email because we received quote number details for your account
+        </p>
+    </td>
+</tr>
+                    <tr>
+                        <td class="email-masthead " >
+                            <h1 style="font-family: sans-serif;text-align:center">Hi %%name%%,</h1>
+                            <p style="font-family: sans-serif;text-align:center"><strong>Custom Number:</strong>%%studentname%%</p>
+                            <p style="font-family: sans-serif;text-align:center"><strong>Support:</strong>%%link%%</p>
+                            <!-- Action -->
+              <p style="    margin-left: 50px;">
+                                Thanks,
+                       
+                                <br/>
+                                ICL HUB Support Team
+                            </p>
+                            <!-- Sub copy -->
+                            <table class="body-sub">
+                                <tr>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="email-footer" align="center" width="80%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="content-cell" align="center">
+                            <p style="font-size: 11px;"> International Cargo Logistics Limited is a company registered in Engaland and wales under number 05230331 .Registered office: Mondial house, 2nd floor,5 mondial way,Horlington,UB3 5AR,</p><p  style="font-size: 11px;text-align:center">United Kingdom. International Cargo Limited operates under BIFA standard oprating items,<a href="www.bifa.org">www.bifa.org</a></p>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+            </div>
+    </div>
+</body>
+</html>,

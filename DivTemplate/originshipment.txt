@@ -1,0 +1,47 @@
+﻿
+            	 <tr onclick="navigateToShimentDetails('%%shipencryptid%%');" style="cursor: pointer;">
+            <td  onclick="event.stopPropagation(); handleShipmentAction(this, this.getAttribute('data-action'));"  
+           data-action="insert"
+           data-shiptransmode="%%spr_trans%%"
+           data-shipmode="%%spr_mode%%" 
+           data-shipmentid="%%spr_shipmentid%%" 
+           data-shipreference="%%spr_shippersreference%%"
+           data-shiporign="%%spr_origin%%"
+           data-shiporiginetd="%%spr_originetd%%"
+           data-shipconsignorname="%%spr_consignorname%%"
+           data-shipconsigneename="%%spr_consigneename%%"
+           data-shipdestination="%%spr_destination%%"
+           data-shipdestinationeta="%%spr_destinationeta%%"
+           data-shipvessel="%%spr_vessel%%"
+           data-shipgoodsdescription="%%spr_goodsdescription%%"
+           data-shipestcartagedelivery="%%spr_estcartagedelivery%%"
+           data-shipactualcartagedelivery="%%spr_actualcartagedelivery%%"
+           data-shipflightvoyage="%%spr_flightvoyage%%"
+           data-shippickupby="%%spr_pickupby%%"
+           data-shipactualpickup="%%spr_actualpickup%%"
+           data-shipcontainercount="%%spr_containercount%%"
+           data-shipcarriername="%%spr_carriername%%"
+           data-shipteu="%%spr_teu%%"> 
+            <i class="%%icon%%" style="color:orange; cursor:pointer;">
+           </i></td>
+                                    <td><i class="fa fa-%%spr_trans%%"></i></td>
+                                    <td>%%spr_mode%%</td>
+                                    <td>%%spr_shipmentid%%</td>
+                                    <td>%%spr_shippersreference%%</td>
+                                    <td>%%spr_origin%%</td>
+                                    <td>%%spr_originetd%%</td>
+                                    <td>%%spr_consignorname%%</td>
+                                    <td>%%spr_consigneename%%</td>
+                                    <td>%%spr_destination%%</td>
+                                    <td>%%spr_destinationeta%%</td>
+                                    <td>%%spr_vessel%% </td>
+                                    <td>%%spr_goodsdescription%%</td>
+                                    <td>%%spr_estcartagedelivery%%</td>
+                                    <td>%%spr_actualcartagedelivery%%</td>
+                                    <td>%%spr_flightvoyage%%</td>
+                                    <td>%%spr_pickupby%%</td>
+                                    <td>%%spr_actualpickup%%</td>
+                                    <td>%%spr_containercount%%</td>
+                                    <td>%%spr_carriername%%</td>
+                                    <td>%%spr_teu%%</td>
+                                </tr>

@@ -1,0 +1,33 @@
+﻿				      <tr onclick="navigateToCustomdetails('%%Custencrptid%%,%%department%%');" style="cursor: pointer;">
+                      <td  onclick="event.stopPropagation(); handleCustomAction(this, this.getAttribute('data-action'));"  
+           data-action="insert"
+           data-customjob="%%gbi_job%%" 
+           data-customentrytype="%%spr_incoterm%%"
+           data-customorigin="%%gbi_origin15%%" 
+           data-custometdorigin="%%gbi_etdorigin%%"
+           data-customdestination="%%gbi_destination17%%"
+           data-customarrivaldate="%%gbi_arrivaldate%%"
+           data-customentrynumbers="%%gbi_entrynumbers%%"
+           data-customstatus="%%gbi_status%%"
+           data-customstatusdescription="%%gbi_statusdescription%%"
+           data-customgoodsdescription="%%gbi_goodsdescription%%"
+           data-customhousebill="%%gbi_housebill%%"
+           data-customclearancedate="%%gbi_clearancedate%%"> 
+           <i class="%%icon%%" style="color:orange"></i></td>
+                      <td>%%gbi_job%%</td>
+                                    <td>%%spr_incoterm%%</td>
+                                    <td>%%gbi_origin15%%</td>
+                                    <td>%%gbi_etdorigin%%</td>
+                                    <td>%%gbi_destination17%%</td>
+                                    <td>%%gbi_arrivaldate%%</td>
+                                    <td>%%gbi_entrynumbers%%</td>
+                                    <td>%%gbi_status%%</td>
+                                    <td>%%gbi_statusdescription%%</td>
+                                    <td>%%gbi_goodsdescription%%</td>
+                                    <td>%%gbi_housebill%% </td>
+                                    <td>%%gbi_clearancedate%%</td>
+                                </tr>
+
+
+
+          

@@ -1,0 +1,11 @@
+﻿        
+               <tr onclick="navigateToContainerdetails('%%containerencrptid%%');" style="cursor: pointer;">
+                <td >%%icfd_container%%</td>
+                                    <td>%%icfd_conttype%%</td>
+                                    <td>%%icfd_contmode%%</td>
+                                    <td>%%icfd_eta%%</td>
+                                    <td>%%icfd_estimateddeliver%%</td>
+                                    <td>%%icfd_actualdeliver%%</td>
+                                    <td>%%icfd_emptyreturned%%</td>
+                                   
+                                </tr>
